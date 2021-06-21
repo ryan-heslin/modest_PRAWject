@@ -1,4 +1,4 @@
-#!/C/Users/heslinr1/Documents/Software/Python/Spyder/python.exe
+
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jun 17 11:08:35 2021
@@ -6,12 +6,6 @@ Created on Thu Jun 17 11:08:35 2021
 @author: heslinr1
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Thurs Jun 17 11:09:23 2021
-Search for and delete Reddit posts
-@author: heslinr1
-"""
 from config import *
 from reddit_funs import *
 import argparse as ap

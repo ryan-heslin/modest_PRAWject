@@ -5,13 +5,6 @@ Created on Thu Jun 17 09:58:53 2021
 @author: heslinr1
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun 17 09:37:57 2021
-
-@author: heslinr1
-"""
-
 import os
 import sys
 from colors import *
