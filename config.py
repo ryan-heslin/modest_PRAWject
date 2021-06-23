@@ -10,6 +10,25 @@ import sys
 from colors import *
 
 def config_environ(app, username, password):
+    """
+    Sets environemntal variables needed to run
+    a specified script.
+
+    Parameters
+    ----------
+    app : string
+        Name of app to run - simply the file name
+        without the extension
+    username : (string)
+        User's Reddit username.
+    password : (string)
+        User's Reddit password.
+
+    Returns
+    -------
+    None.
+
+    """
     os.environ["REDDIT_USERNAME"] = username
     os.environ["REDDIT_PASSWORD"] = password
     mapping = { "autobrowse" : {"APP_NAME" : "autobrowse", "REDDIT_SCRIPT_USE" :

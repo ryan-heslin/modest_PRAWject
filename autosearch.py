@@ -14,13 +14,18 @@ import re
 from math import inf
 import itertools as it
 
-#Clever suggestion from Python discord user ConfusedReptile:
-
+"""Clever suggestion from Python discord user ConfusedReptile.
+For an object y of this class, x in y is always True."""
 class Universe:
     def __contains__(self, other):
         return True
 
+
 class UserAction(ap.Action):
+    
+    """Overrides superclass method. Converts list of
+    usernames to praw.models.Redditor instances. Exits with error if
+    none are valid"""
     def __call__(self, parser, namespace, argument_values, option_string):
         argument_values = list2users(users = argument_values, reddit = reddit)
       
@@ -30,7 +35,9 @@ class UserAction(ap.Action):
         setattr(namespace, "users", argument_values)
         
 class QueryAction(ap.Action):
-     def __call__(self, parser, namespace, argument_values, option_string = None):
+    """Overrides superclass method. Verifies that a string passed to query is a valid
+    regular expression."""
+    def __call__(self, parser, namespace, argument_values, option_string = None):
         argument_values = argument_values.pop()
         try: 
              re.compile(argument_values)
@@ -40,6 +47,9 @@ class QueryAction(ap.Action):
         setattr(namespace, "query", argument_values)
 
 class SubredditsAction(ap.Action):
+    """Overrides superclass method. Finds valid subreddits
+    names in a list and converts them to praw.models.Subreddit
+    instances. If none are valid, exits with error."""
     def __call__(self, parser, namespace, argument_values, option_string):
         argument_values = list(filter(lambda x: verify_sub(x, reddit), argument_values))
         if not argument_values:

@@ -8,6 +8,10 @@ from colors import *
 
 """Extension of argparse.Action class"""
 class SubredditsAction(ap.Action):
+    
+    """Overrides superclass method. 
+    Converts list of string naming subreddits to list of reddit instances.
+    If none are valid subreddits, exits with error."""
     def __call__(self, parser, namespace, argument_values, option_string = None):
         
         if( isinstance(argument_values, list)):
