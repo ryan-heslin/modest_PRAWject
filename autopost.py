@@ -1,4 +1,4 @@
-
+#!/C/Users/heslinr1/Documents/Software/Python/Spyder/python.exe
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jun 13 09:50:01 2021
@@ -11,7 +11,7 @@ from reddit_funs import *
 import sys
 import argparse as ap
 
-config_environ(app = "autopost", username = , password = )
+config_environ(app = "autopost")
 reddit = config_reddit()
 
 parser = ap.ArgumentParser(description = 'Specify arguments for Reddit post')

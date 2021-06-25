@@ -1,4 +1,4 @@
-
+#!/C/Users/heslinr1/Documents/Software/Python/Spyder/python.exe
 # -*- coding: utf-8 -*-
 from config import *
 from reddit_funs import *
@@ -23,7 +23,7 @@ class SubredditsAction(ap.Action):
         
         setattr(namespace, "subreddits", argument_values)
     
-config_environ(app = "autobrowse", username = , password = )
+config_environ(app = "autobrowse")
 reddit = config_reddit()
 
 parser = ap.ArgumentParser(description = "Specify parameters for Reddit browsing")

@@ -9,7 +9,8 @@ import os
 import sys
 from colors import *
 
-def config_environ(app, username, password):
+
+def config_environ(app):
     """
     Sets environemntal variables needed to run
     a specified script.
@@ -29,8 +30,18 @@ def config_environ(app, username, password):
     None.
 
     """
-    os.environ["REDDIT_USERNAME"] = username
-    os.environ["REDDIT_PASSWORD"] = password
+    
+    try:    
+        os.environ["REDDIT_USERNAME"]
+    except KeyError:
+        username = input("Enter a Reddit username:\n")
+        os.environ["REDDIT_USERNAME"] = username
+    try:
+        os.environ["REDDIT_PASSWORD"]
+    except KeyError:
+        password = input("Enter a Reddit password:\n")
+        os.environ["REDDIT_PASSWORD"] = password
+        
     mapping = { "autobrowse" : {"APP_NAME" : "autobrowse", "REDDIT_SCRIPT_USE" :
                                "2EffsaZL9_-Jcw", "REDDIT_SECRET" : "rrXsNgrHNz9yzMzVLz5LXkIsNAIrig"},
            "autopost" : {"APP_NAME" : "autopost", 

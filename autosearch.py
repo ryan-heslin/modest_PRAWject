@@ -1,4 +1,4 @@
-
+#!/C/Users/heslinr1/Documents/Software/Python/Spyder/python.exe
 # -*- coding: utf-8 -*-
 """
 Created on Thu Jun 17 11:08:35 2021
@@ -59,7 +59,7 @@ class SubredditsAction(ap.Action):
 
 
 
-config_environ(app = "autosearch", username = , password = )
+config_environ(app = "autosearch")
 reddit = config_reddit()
 
 parser = ap.ArgumentParser(description = """Specify search parameters for comments

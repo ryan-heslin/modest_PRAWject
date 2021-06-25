@@ -7,9 +7,12 @@ nd subreddit. For usage details, view the help for each program.
 
 Each program works by configuring several environment variables needed to
 initialize an insance of Reddit's PRAW class. Two of these, REDDIT_USERNAME
-and REDDIT_PASSWORD, will be unique to each user and are accordingly left
-blank in each program's script. Fill them in with your information to use the
-programs.
+and REDDIT_PASSWORD, will be unique to each user. It is recommended you set
+these environment variabes permanently in your .bash_profile (or equivalent,
+depending on your system). If either or both are unset when the script is run,
+you will be prompted to supply the missing variables at the command line.
 
 Before running, be sure to run export PYTHONIOENCODING=UTF-8 in the terminal -
 otherwise, it will not be able to render non-ASCII characters.
+
+Happy Redditing!
